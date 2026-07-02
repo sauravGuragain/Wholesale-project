@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Theme tokens. Light is the default; `.dark` on <html> swaps them.
+  Values are space-separated RGB channels so Tailwind's `<alpha-value>` works.
+*/
+:root {
+  --canvas: 248 250 252; /* slate-50 */
+  --surface: 255 255 255;
+  --surface-2: 248 250 252;
+  --border: 226 232 240; /* slate-200 */
+  --content: 15 23 42; /* slate-900 */
+  --muted: 100 116 139; /* slate-500 */
+
+  --primary: 67 56 202; /* indigo-700 */
+  --primary-fg: 255 255 255;
+  --primary-soft: 238 242 255; /* indigo-50 */
+
+  --accent: 217 119 6; /* amber-600 (saffron) */
+  --accent-soft: 254 243 199; /* amber-100 */
+
+  --success: 22 163 74;
+  --warning: 202 138 4;
+  --danger: 220 38 38;
+}
+
+.dark {
+  --canvas: 2 6 23; /* slate-950 */
+  --surface: 15 23 42; /* slate-900 */
+  --surface-2: 30 41 59; /* slate-800 */
+  --border: 51 65 85; /* slate-700 */
+  --content: 241 245 249; /* slate-100 */
+  --muted: 148 163 184; /* slate-400 */
+
+  --primary: 129 140 248; /* indigo-400 — lifts on dark */
+  --primary-fg: 15 23 42;
+  --primary-soft: 30 27 75; /* indigo-950 */
+
+  --accent: 245 158 11; /* amber-500 */
+  --accent-soft: 69 26 3;
+
+  --success: 34 197 94;
+  --warning: 234 179 8;
+  --danger: 248 113 113;
+}
+
+* {
+  border-color: rgb(var(--border));
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply bg-canvas text-content font-sans antialiased;
+}
+
+/* Consistent, subtle focus ring across interactive elements */
+:where(button, a, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid rgb(var(--primary));
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}
+
+/* Thin, unobtrusive scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--border));
+  border-radius: 9999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--muted));
+  background-clip: content-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
