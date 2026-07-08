@@ -14,7 +14,7 @@
   --content: 15 23 42; /* slate-900 */
   --muted: 100 116 139; /* slate-500 */
 
-  --primary: 67 56 202; /* indigo-700 */
+  --primary: 136 8 8; /* indigo-700 */
   --primary-fg: 255 255 255;
   --primary-soft: 238 242 255; /* indigo-50 */
 
@@ -34,7 +34,7 @@
   --content: 241 245 249; /* slate-100 */
   --muted: 148 163 184; /* slate-400 */
 
-  --primary: 129 140 248; /* indigo-400 — lifts on dark */
+  --primary: 200 40 40; /* indigo-400 — lifts on dark */
   --primary-fg: 15 23 42;
   --primary-soft: 30 27 75; /* indigo-950 */
 

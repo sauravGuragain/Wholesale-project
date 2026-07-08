@@ -4,7 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
-import { Boxes, LogIn } from "lucide-react";
+import { LogIn } from "lucide-react";
+import { OmLogo } from "@/components/ui/OmLogo";
 import { Button } from "@/components/ui/Button";
 import { Field, Input } from "@/components/ui/Input";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
@@ -49,7 +50,7 @@ export function LoginPage() {
       <div className="grid w-full max-w-4xl overflow-hidden rounded-2xl border border-border bg-surface shadow-pop md:grid-cols-2">
         <div className="hidden flex-col justify-between bg-primary p-10 text-primary-fg md:flex">
           <div className="flex items-center gap-2">
-            <Boxes className="h-7 w-7" />
+            <OmLogo className="h-7 w-7" />
             <span className="font-display text-lg font-extrabold">Wholesale Console</span>
           </div>
           <div>
@@ -66,7 +67,7 @@ export function LoginPage() {
 
         <div className="p-8 md:p-10">
           <div className="mb-6 flex items-center gap-2 md:hidden">
-            <Boxes className="h-6 w-6 text-primary" />
+            <OmLogo className="h-6 w-6 text-primary" />
             <span className="font-display text-lg font-extrabold">Wholesale Console</span>
           </div>
           <h2 className="font-display text-2xl font-bold text-content">Sign in</h2>

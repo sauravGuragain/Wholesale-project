@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import { Boxes, X } from "lucide-react";
+import { X } from "lucide-react";
+import { OmLogo } from "@/components/ui/OmLogo";
 import { cn } from "@/lib/utils";
 import type { NavSection } from "./nav";
 
@@ -24,7 +25,7 @@ export function Sidebar({ sections, open, onClose }: SidebarProps) {
         <div className="flex h-16 items-center justify-between border-b border-border px-5">
           <div className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-fg">
-              <Boxes className="h-5 w-5" />
+              <OmLogo className="h-5 w-5" />
             </div>
             <span className="font-display text-base font-extrabold text-content">Wholesale</span>
           </div>
